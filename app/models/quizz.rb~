@@ -1,0 +1,19 @@
+class Quizz < ActiveRecord::Base
+validates_presence_of :question, :ans1, :ans2
+validates_numericality_of :correctAns
+
+belongs_to :user
+
+
+def test_result_positive
+	@user = user
+	@user.email = user.email
+	mail(:to => @user.email, :subject => "Test result")
+	end
+
+	def test_result
+	@user = user
+	@user.email = user.email
+	mail(:to => @user.email, :subject => "Test result")
+	end
+end

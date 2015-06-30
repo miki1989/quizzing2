@@ -1,0 +1,561 @@
+  [1m[36m (111.1ms)[0m  [1mCREATE TABLE "quizzs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" text, "ans1" text, "ans2" text, "ans3" text, "ans4" text, "correctAns" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (109.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "password_digest" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (95.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (99.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (112.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150608195222')[0m
+  [1m[35m (112.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150608113813')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:30:53', '2015-06-29 15:30:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:30:53', '2015-06-29 15:30:53', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:30:53', '2015-06-29 15:30:53', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:30:53', '2015-06-29 15:30:53', 298486374)
+  [1m[36m (104.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:32:00', '2015-06-29 15:32:00', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:32:00', '2015-06-29 15:32:00', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:32:00', '2015-06-29 15:32:00', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:32:00', '2015-06-29 15:32:00', 298486374)
+  [1m[36m (109.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_first_name_should_be_present
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:32:39', '2015-06-29 15:32:39', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:32:39', '2015-06-29 15:32:39', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:32:39', '2015-06-29 15:32:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:32:39', '2015-06-29 15:32:39', 298486374)
+  [1m[36m (110.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_first_name_should_be_present
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:34:19', '2015-06-29 15:34:19', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:34:19', '2015-06-29 15:34:19', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:34:19', '2015-06-29 15:34:19', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:34:19', '2015-06-29 15:34:19', 298486374)
+  [1m[36m (103.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+----------------------------------------------
+QuizzsControllerTest: test_should_update_quizz
+----------------------------------------------
+  [1m[36mQuizz Load (0.4ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by QuizzsController#update as HTML
+  Parameters: {"quizz"=>{"ans1"=>"MyText", "ans2"=>"MyText", "ans3"=>"MyText", "ans4"=>"MyText", "correctAns"=>"1", "question"=>"MyText"}, "id"=>"980190962"}
+  [1m[35mQuizz Load (0.1ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+QuizzsControllerTest: test_should_destroy_quizz
+-----------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "quizzs"
+Processing by QuizzsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mQuizz Load (0.1ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+QuizzsControllerTest: test_should_create_quizz
+----------------------------------------------
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "quizzs"[0m
+Processing by QuizzsController#create as HTML
+  Parameters: {"quizz"=>{"ans1"=>"MyText", "ans2"=>"MyText", "ans3"=>"MyText", "ans4"=>"MyText", "correctAns"=>"1", "question"=>"MyText"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+QuizzsControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by QuizzsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mQuizz Load (0.1ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+QuizzsControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by QuizzsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+QuizzsControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by QuizzsController#index as HTML
+Redirected to http://test.host/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+QuizzsControllerTest: test_should_show_quizz
+--------------------------------------------
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by QuizzsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+DomControllerTest: test_should_get_index
+----------------------------------------
+Processing by DomController#index as HTML
+  Rendered dom/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 2033ms (Views: 2032.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_first_name_should_be_present
+-------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_last_name_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_first_name_should_not_be_too_long
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:34:31', '2015-06-29 15:34:31', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:34:31', '2015-06-29 15:34:31', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:34:31', '2015-06-29 15:34:31', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:34:31', '2015-06-29 15:34:31', 298486374)
+  [1m[36m (114.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_first_name_should_be_present
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_last_name_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_first_name_should_not_be_too_long
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:35:15', '2015-06-29 15:35:15', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:35:15', '2015-06-29 15:35:15', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:35:15', '2015-06-29 15:35:15', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:35:15', '2015-06-29 15:35:15', 298486374)
+  [1m[36m (109.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_first_name_should_be_present
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_first_name_should_not_be_too_long
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------
+UserTest: test_email_validation_should_accept_valid_addresses
+-------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_last_name_should_not_be_too_long
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:37:37', '2015-06-29 15:37:37', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:37:37', '2015-06-29 15:37:37', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:37:37', '2015-06-29 15:37:37', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:37:37', '2015-06-29 15:37:37', 298486374)
+  [1m[36m (121.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+UserTest: test_first_name_should_be_present
+-------------------------------------------
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_first_name_should_not_be_too_long
+------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = '     ' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_last_name_should_not_be_too_long
+-----------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:38:46', '2015-06-29 15:38:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-29 15:38:46', '2015-06-29 15:38:46', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:38:46', '2015-06-29 15:38:46', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-29 15:38:46', '2015-06-29 15:38:46', 298486374)
+  [1m[36m (108.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+------------------------------------------------
+UserTest: test_first_name_should_not_be_too_long
+------------------------------------------------
+  [1m[36mUser Exists (16.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+UserTest: test_first_name_should_be_present
+-------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('     ') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_last_name_should_not_be_too_long
+-----------------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-30 09:58:54', '2015-06-30 09:58:54', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-30 09:58:54', '2015-06-30 09:58:54', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-30 09:58:54', '2015-06-30 09:58:54', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-30 09:58:54', '2015-06-30 09:58:54', 298486374)
+  [1m[36m (108.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+------------------------------------------
+QuizzsControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[36mQuizz Load (0.4ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by QuizzsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+QuizzsControllerTest: test_should_create_quizz
+----------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "quizzs"
+Processing by QuizzsController#create as HTML
+  Parameters: {"quizz"=>{"ans1"=>"MyText", "ans2"=>"MyText", "ans3"=>"MyText", "ans4"=>"MyText", "correctAns"=>"1", "question"=>"MyText"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+QuizzsControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by QuizzsController#index as HTML
+Redirected to http://test.host/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+QuizzsControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by QuizzsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+QuizzsControllerTest: test_should_update_quizz
+----------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by QuizzsController#update as HTML
+  Parameters: {"quizz"=>{"ans1"=>"MyText", "ans2"=>"MyText", "ans3"=>"MyText", "ans4"=>"MyText", "correctAns"=>"1", "question"=>"MyText"}, "id"=>"980190962"}
+  [1m[35mQuizz Load (0.1ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+QuizzsControllerTest: test_should_destroy_quizz
+-----------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "quizzs"
+Processing by QuizzsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mQuizz Load (0.1ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+QuizzsControllerTest: test_should_show_quizz
+--------------------------------------------
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by QuizzsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+DomControllerTest: test_should_get_index
+----------------------------------------
+Processing by DomController#index as HTML
+  Rendered dom/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 6388ms (ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-30 09:59:11', '2015-06-30 09:59:11', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-30 09:59:11', '2015-06-30 09:59:11', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-30 09:59:11', '2015-06-30 09:59:11', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-30 09:59:11', '2015-06-30 09:59:11', 298486374)
+  [1m[36m (115.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+----------------------------------------------
+QuizzsControllerTest: test_should_update_quizz
+----------------------------------------------
+  [1m[36mQuizz Load (0.4ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by QuizzsController#update as HTML
+  Parameters: {"quizz"=>{"ans1"=>"MyText", "ans2"=>"MyText", "ans3"=>"MyText", "ans4"=>"MyText", "correctAns"=>"1", "question"=>"MyText"}, "id"=>"980190962"}
+  [1m[35mQuizz Load (0.1ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+QuizzsControllerTest: test_should_create_quizz
+----------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "quizzs"
+Processing by QuizzsController#create as HTML
+  Parameters: {"quizz"=>{"ans1"=>"MyText", "ans2"=>"MyText", "ans3"=>"MyText", "ans4"=>"MyText", "correctAns"=>"1", "question"=>"MyText"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+QuizzsControllerTest: test_should_destroy_quizz
+-----------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "quizzs"
+Processing by QuizzsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mQuizz Load (0.1ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+QuizzsControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by QuizzsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+QuizzsControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by QuizzsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mQuizz Load (0.1ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+QuizzsControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mQuizz Load (0.2ms)[0m  [1mSELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by QuizzsController#index as HTML
+Redirected to http://test.host/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+QuizzsControllerTest: test_should_show_quizz
+--------------------------------------------
+  [1m[35mQuizz Load (0.2ms)[0m  SELECT  "quizzs".* FROM "quizzs" WHERE "quizzs"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by QuizzsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+DomControllerTest: test_should_get_contact
+------------------------------------------
+Processing by DomController#contact as HTML
+  Rendered dom/contact.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 8817ms (Views: 8816.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+DomControllerTest: test_should_get_index
+----------------------------------------
+Processing by DomController#index as HTML
+  Rendered dom/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-30 10:02:18', '2015-06-30 10:02:18', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-30 10:02:18', '2015-06-30 10:02:18', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-30 10:02:18', '2015-06-30 10:02:18', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-30 10:02:18', '2015-06-30 10:02:18', 298486374)
+  [1m[36m (112.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-06-30 12:02:18 +0200
+Processing by DomController#index as HTML
+  Rendered dom/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 361ms (Views: 334.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-30 10:03:58', '2015-06-30 10:03:58', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-06-30 10:03:58', '2015-06-30 10:03:58', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "quizzs"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-30 10:03:58', '2015-06-30 10:03:58', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "quizzs" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at", "id") VALUES ('MyText', 'MyText', 'MyText', 'MyText', 'MyText', 1, '2015-06-30 10:03:58', '2015-06-30 10:03:58', 298486374)
+  [1m[36m (110.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-06-30 12:03:58 +0200
+Processing by DomController#index as HTML
+  Rendered dom/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 365ms (Views: 342.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

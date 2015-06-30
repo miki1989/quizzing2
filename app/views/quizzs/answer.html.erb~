@@ -1,0 +1,28 @@
+<h2><p>
+<b>Question:</b>
+<%=h @quizz.question %>
+</p>
+<p>
+<b>Ans1:</b>
+<%=h  @quizz.ans1 %>
+</p>
+<p>
+<b>Ans2:</b>
+<%=h @quizz.ans2 %>
+</p>
+<p>
+<b>Ans3:</b>
+<%=h @quizz.ans3 %>
+</p>
+<p>
+<b>Ans4:</b>
+<%=h @quizz.ans4 %>
+</h2></p>
+<%= radio_button_tag(:action => "check",:id => @quizz.id) do %>
+<p>
+<b>The correct answer is number: </b>
+<%= text_field :answer, params[:answer] %>
+</p>
+<p><%= submit_tag("check") %></P>
+<% end %>
+<%= link_to 'Back', {:controller => "quizzs", :action => "answering",:id=>"1" } %>
