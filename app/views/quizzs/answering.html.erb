@@ -7,12 +7,13 @@
 
 <th>Question</th>
 </tr>
-<% @quizzs.each do |quizz| %>
-<tr>
-<td><%= quizz.question %></td>
-<td><%= link_to ' Answer this', :controller => "quizzs", :action => "answer",:id=>quizz.id%></td>
-</tr>
-<% end %>
+	<% @quizzs.each do |quizz| %>
+	<tr>
+	<td><%= quizz.question %></td>
+	<td><%= link_to ' Answer this', :controller => "quizzs", :action => "answer",:id=>quizz.id %>
+	</td>
+	</tr>
+	<% end %>
 </table>
 </br>
 <%= link_to 'Back', root_path %>

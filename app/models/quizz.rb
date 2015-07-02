@@ -1,9 +1,5 @@
 class Quizz < ActiveRecord::Base
-validates_presence_of :question, :ans1, :ans2
-validates_numericality_of :correctAns
-
-belongs_to :user
-
-
-
+	validates :question, :ans1, :ans2, :ans3, :ans4, presence: true
+	validates :correctAns, numericality: { only_integer: true } 
+	belongs_to :user
 end

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
  helper_method :current_user 
 
-helper_method :require_admin
+
 
 
 def current_user 
@@ -20,8 +20,7 @@ end
 
 
 def require_admin 
-  redirect_to root_path unless current_user.admin?
-  redirect_to management_path if current_user.admin? 
+  redirect_to '/' unless current_user.admin? 
 end
 
 

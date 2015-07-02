@@ -10,6 +10,6 @@ default :from => "example@o2.com"
 	def test_result(quizz)
 	@quizz = quizz	
 	
-	mail(:to => @quizz.user.email, :subject => "Test result")
+	mail(:to => @quizz.email, :subject => "Test result")
 	end
 end

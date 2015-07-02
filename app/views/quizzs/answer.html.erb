@@ -1,21 +1,23 @@
+<br>
+<br>
 <h2><p>
 <b>Question:</b>
 <%=h @quizz.question %>
 </p>
 <p>
-<b>Ans1:</b>
-<%=h  @quizz.ans1 %>
+<b>1</b>
+<%=h @quizz.ans1 %>
 </p>
 <p>
-<b>Ans2:</b>
+<b>2</b>
 <%=h @quizz.ans2 %>
 </p>
 <p>
-<b>Ans3:</b>
+<b>3</b>
 <%=h @quizz.ans3 %>
 </p>
 <p>
-<b>Ans4:</b>
+<b>4</b>
 <%=h @quizz.ans4 %>
 </h2></p>
 <%= form_tag(:action => "check",:id => @quizz.id) do %>
@@ -25,4 +27,5 @@
 </p>
 <p><%= submit_tag("check") %></P>
 <% end %>
+
 <%= link_to 'Back', {:controller => "quizzs", :action => "answering",:id=>"1" } %>

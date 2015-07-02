@@ -2,9 +2,8 @@
       <div class="container">
 	<nav>
           <ul class="nav navbar-nav navbar-right">
-	<% if require_admin? %>
-	<% render(management_path) %>
-	<% end %>
+	
+	
 	<% if current_user %>
           
 	<li><%= current_user.email %></li>

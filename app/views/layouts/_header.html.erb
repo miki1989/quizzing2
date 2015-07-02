@@ -2,24 +2,18 @@
       <div class="container">
 	<nav>
           <ul class="nav navbar-nav navbar-right">
-	
-	
-	<% if current_user %>
-          
-	<li><%= current_user.email %></li>
-        <li><%= link_to "Profile", 'edit' %></li>
-        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-            
-          
-<br>
-<br>
-<p align="right"><h1>Hello, <%= current_user.first_name %></h1></p>
-          <% else %>
-          
-            <li><%= link_to "Login", 'login' %></a></li>
-            <li><%= link_to "Signup", 'signup', class: "btn btn-lg btn-primary" %></a></li>
-    	  </ul>
-	  <% end %>
+		<% if current_user %>
+        	<li><%= current_user.email %></li>
+        	<li><%= link_to "Profile", 'edit' %></li>
+        	<li><%= link_to "Log out", logout_path, method: "delete" %></li>          
+		<br>
+		<br>
+		<p align="right"><h1>Hello, <%= current_user.first_name %></h1></p>
+          	<% else %>
+                <li><%= link_to "Login", 'login' %></a></li>
+            	<li><%= link_to "Signup", 'signup', class: "btn btn-lg btn-primary" %></a></li>
+    	  	<% end %>
+	  </ul>
 	</nav>
       </div>
 </header>
